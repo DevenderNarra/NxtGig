@@ -1,0 +1,186 @@
+/* ───────────────── SECTION ───────────────── */
+
+.impact {
+  padding: 100px 20px;
+  background: linear-gradient(180deg, #f8fbff, #eef6ff, #e0f2fe);
+}
+
+/* ───────────────── HEADER ───────────────── */
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-title {
+  color: #0f172a;
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.section-subtitle {
+  color: #475569;
+  margin-top: 8px;
+}
+
+/* ───────────────── GRID ───────────────── */
+
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  .impact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .impact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ───────────────── CARD ───────────────── */
+
+.impact-card {
+  background: linear-gradient(180deg, #ffffff, #f1f5f9);
+  border-radius: 18px;
+  padding: 22px;
+  border: 1px solid rgba(15,23,42,0.08);
+
+  box-shadow: 
+    0 10px 25px rgba(0,0,0,0.08),
+    0 20px 40px rgba(59,130,246,0.12);
+
+  transition: all 0.35s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.impact-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 
+    0 20px 50px rgba(0,0,0,0.12),
+    0 10px 40px rgba(59,130,246,0.25);
+}
+
+/* ───────────────── ICON ───────────────── */
+
+.impact-icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+  font-size: 18px;
+  margin-bottom: 12px;
+
+  box-shadow: 0 8px 20px rgba(37,99,235,0.3);
+}
+
+/* ───────────────── TEXT ───────────────── */
+
+.impact-card h3 {
+  color: #0f172a;
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.impact-category {
+  color: #64748b;
+  font-size: 0.85rem;
+  margin-bottom: 14px;
+}
+
+/* ───────────────── BOXES ───────────────── */
+
+.impact-box {
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  margin-top: 10px;
+}
+
+.challenge {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+}
+
+.challenge span {
+  color: #dc2626;
+}
+
+.solution {
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+}
+
+.solution span {
+  color: #2563eb;
+}
+
+.outcome {
+  background: #ecfdf5;
+  border: 1px solid #bbf7d0;
+}
+
+.outcome span {
+  color: #16a34a;
+}
+
+/* ───────────────── HOVER ANIMATION ───────────────── */
+
+.impact-hover {
+  opacity: 0;
+  transform: translateY(10px);
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.impact-card:hover .impact-hover {
+  opacity: 1;
+  transform: translateY(0);
+  max-height: 300px;
+}
+
+/* ───────────────── FOOTER ───────────────── */
+
+.impact-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 14px;
+}
+
+.tags span {
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  padding: 5px 10px;
+  border-radius: 999px;
+  margin-right: 6px;
+  font-size: 0.7rem;
+  color: #334155;
+}
+
+.duration {
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+.hover-hint {
+  text-align: center;
+  font-size: 0.7rem;
+  color: #94a3b8;
+  margin-top: 10px;
+}
