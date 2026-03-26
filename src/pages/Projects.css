@@ -5,38 +5,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
   background: linear-gradient(
     180deg,
     #f8fbff 0%,
     #eef6ff 40%,
     #e0f2fe 100%
   );
+
   position: relative;
   overflow: hidden;
-}
-
-/* GLOW */
-
-.projects-coming::before {
-  content: "";
-  position: absolute;
-  width: 400px;
-  height: 400px;
-  background: radial-gradient(circle, rgba(59,130,246,0.2), transparent);
-  top: -100px;
-  left: -100px;
-  filter: blur(100px);
-}
-
-.projects-coming::after {
-  content: "";
-  position: absolute;
-  width: 400px;
-  height: 400px;
-  background: radial-gradient(circle, rgba(147,197,253,0.25), transparent);
-  bottom: -100px;
-  right: -100px;
-  filter: blur(120px);
 }
 
 /* ───────────────── CONTENT ───────────────── */
@@ -45,6 +23,8 @@
   text-align: center;
   max-width: 700px;
   padding: 20px;
+  position: relative;
+  z-index: 3;
 }
 
 /* BADGE */
@@ -88,34 +68,95 @@
 
 .coming-card {
   margin-top: 20px;
-  padding: 20px;
-  border-radius: 16px;
-
-  background: linear-gradient(
-    145deg,
-    rgba(15, 23, 42, 0.75),
-    rgba(30, 41, 59, 0.65),
-    rgba(59, 130, 246, 0.08)
-  );
-
-  backdrop-filter: blur(14px);
-  border: 1px solid rgba(255,255,255,0.08);
-
-  color: #e2e8f0;
+  padding: 18px 24px;
+  border-radius: 12px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  color: #334155;
   font-size: 0.95rem;
-
-  box-shadow: 
-    0 10px 30px rgba(0,0,0,0.4),
-    inset 0 1px 1px rgba(255,255,255,0.08);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
 }
 
-/* HOVER */
+/* ───────────────── STARS ───────────────── */
 
-.coming-card:hover {
-  transform: translateY(-6px);
-  transition: 0.3s;
+.stars {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
 
-  box-shadow: 
-    0 20px 40px rgba(0,0,0,0.5),
-    0 0 30px rgba(59,130,246,0.25);
+.stars span {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: #3b82f6;
+  border-radius: 50%;
+  opacity: 0.6;
+  animation: floatUp linear infinite;
+}
+
+/* random positions */
+
+.stars span:nth-child(1) { left: 10%; animation-duration: 6s; }
+.stars span:nth-child(2) { left: 20%; animation-duration: 8s; }
+.stars span:nth-child(3) { left: 30%; animation-duration: 10s; }
+.stars span:nth-child(4) { left: 40%; animation-duration: 7s; }
+.stars span:nth-child(5) { left: 50%; animation-duration: 9s; }
+.stars span:nth-child(6) { left: 60%; animation-duration: 6s; }
+.stars span:nth-child(7) { left: 70%; animation-duration: 8s; }
+.stars span:nth-child(8) { left: 80%; animation-duration: 10s; }
+.stars span:nth-child(9) { left: 90%; animation-duration: 7s; }
+
+/* animation */
+
+@keyframes floatUp {
+  0% {
+    top: 100%;
+    opacity: 0;
+  }
+  100% {
+    top: -10%;
+    opacity: 1;
+  }
+}
+
+/* ───────────────── CONFETTI ───────────────── */
+
+.confetti {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.confetti span {
+  position: absolute;
+  width: 6px;
+  height: 12px;
+  opacity: 0.8;
+  animation: confettiFall linear infinite;
+}
+
+/* colors */
+
+.confetti span:nth-child(1) { left: 10%; background: #3b82f6; animation-duration: 4s; }
+.confetti span:nth-child(2) { left: 20%; background: #22c55e; animation-duration: 5s; }
+.confetti span:nth-child(3) { left: 30%; background: #f59e0b; animation-duration: 6s; }
+.confetti span:nth-child(4) { left: 40%; background: #ef4444; animation-duration: 4s; }
+.confetti span:nth-child(5) { left: 50%; background: #3b82f6; animation-duration: 5s; }
+.confetti span:nth-child(6) { left: 60%; background: #22c55e; animation-duration: 6s; }
+.confetti span:nth-child(7) { left: 70%; background: #f59e0b; animation-duration: 4s; }
+.confetti span:nth-child(8) { left: 80%; background: #ef4444; animation-duration: 5s; }
+
+/* animation */
+
+@keyframes confettiFall {
+  0% {
+    top: -10%;
+    transform: rotate(0deg);
+  }
+  100% {
+    top: 110%;
+    transform: rotate(360deg);
+  }
 }

@@ -193,28 +193,31 @@ export default function Home() {
       <StudentProjects />
       {/* ── Get Started ────────────────────────────────────────── */}
       <section className="section get-started" id="get-started">
-        <div className="container">
-          <div className="get-started__card">
-            <div className="get-started__glow" />
-            <div className="get-started__content">
-              <div className="section-pill section-pill--light">🎯 Limited Spots</div>
-              <h2 className="get-started__title">Start Your Journey Today</h2>
-              <p className="get-started__sub">
-                Join thousands of students already building their portfolios with live SaaS projects.
-                Spots are limited — apply before the next cohort closes.
-              </p>
-              <div className="get-started__actions">
-                <Link to="/projects" className="btn btn-ghost">
-                  Browse Projects
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                    <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+  <div className="container">
+
+    <div className="get-started__content">
+
+      <div className="section-pill">ARE YOU READY ?</div>
+
+      <h2 className="get-started__title">
+        Start Your Journey Today
+      </h2>
+
+      <p className="get-started__sub">
+        Join thousands of students already building their portfolios with live SaaS projects.
+        Spots are limited — apply before the next cohort closes.
+      </p>
+
+      <div className="get-started__actions">
+        <Link to="/projects" className="btn-primary">
+          Browse Projects →
+        </Link>
+      </div>
+
+    </div>
+
+  </div>
+</section>
     </main>
   );
 }

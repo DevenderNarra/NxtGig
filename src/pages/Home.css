@@ -430,138 +430,71 @@
     max-width: 100%;
   }
 }
-/* ─── Testimonials ───────────────────────────────────────────── */
-.testimonials { background: var(--bg); }
-
-.testimonials__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-}
-
-.testimonial-card {
-  background: var(--card-bg);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 32px;
-  box-shadow: var(--shadow-sm);
-  position: relative;
-  transition: var(--transition);
-}
-
-.testimonial-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-md);
-}
-
-.testimonial-card__quote {
-  font-family: Georgia, serif;
-  font-size: 4rem;
-  line-height: .8;
-  color: var(--primary);
-  opacity: .15;
-  margin-bottom: 8px;
-  font-weight: 700;
-}
-
-.testimonial-card__text {
-  font-size: 0.9rem;
-  color: var(--text-secondary);
-  line-height: 1.7;
-  margin-bottom: 24px;
-}
-
-.testimonial-card__author {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.testimonial-card__avatar {
-  width: 40px; height: 40px;
-  border-radius: 50%;
-  background: var(--accent-grad);
-  color: #fff;
-  font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: 0.8rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.testimonial-card__name {
-  font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: 0.9rem;
-  color: var(--heading);
-}
-
-.testimonial-card__role {
-  font-size: 0.78rem;
-  color: var(--text-muted);
-  margin-top: 2px;
-}
-
 /* ─── Get Started ────────────────────────────────────────────── */
-.get-started { background: var(--bg); }
+/* ─── Get Started (No Box Style) ───────────────── */
 
-.get-started__card {
-  background: var(--accent-grad);
-  border-radius: var(--radius-lg);
-  padding: 72px 40px;
+.get-started {
+  padding: 100px 20px;
   text-align: center;
-  position: relative;
-  overflow: hidden;
+
+  /* same as website bg */
+  background: transparent;
 }
 
-.get-started__glow {
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 50% 0%, rgba(255,255,255,.15) 0%, transparent 60%);
-  pointer-events: none;
+/* CENTER CONTENT */
+
+.get-started__content {
+  max-width: 700px;
+  margin: 0 auto;
 }
 
-.get-started__content { position: relative; z-index: 2; }
+/* TITLE */
 
 .get-started__title {
-  font-family: var(--font-heading);
-  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  font-size: clamp(2rem, 4vw, 2.8rem);
   font-weight: 800;
-  color: #fff;
-  letter-spacing: -.025em;
+  color: #0f172a;
   margin: 16px 0 20px;
 }
 
+/* SUBTEXT */
+
 .get-started__sub {
-  font-size: 1rem;
-  color: rgba(255,255,255,.8);
-  max-width: 500px;
-  margin: 0 auto 36px;
+  font-size: 1.05rem;
+  color: #475569;
   line-height: 1.7;
+  margin-bottom: 32px;
 }
 
-.get-started__actions { display: flex; justify-content: center; }
+/* BUTTON */
 
-/* ─── Responsive ────────────────────────────────────────────── */
-@media (max-width: 1024px) {
-  .steps-grid { grid-template-columns: repeat(3, 1fr); gap: 16px; }
-  .step-card { margin: 0; }
-  .step-card__connector { display: none; }
+.btn-primary {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 10px;
+
+  background: #2563eb;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+
+  transition: all 0.3s ease;
 }
 
-@media (max-width: 768px) {
-  .hero { padding: 60px 0 60px; }
-  .steps-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
-  .testimonials__grid { grid-template-columns: 1fr; }
-  .hero__stats { flex-direction: column; max-width: 300px; }
-  .hero__stat { border-right: none; border-bottom: 1px solid var(--border); }
-  .hero__stat:last-child { border-bottom: none; }
-  .get-started__card { padding: 48px 24px; }
-  .announcement-banner__inner { gap: 8px; font-size: 0.8rem; }
+.btn-primary:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
 }
 
-@media (max-width: 480px) {
-  .steps-grid { grid-template-columns: 1fr; }
+/* PILL */
+
+.section-pill {
+  display: inline-block;
+  background: rgba(37,99,235,0.1);
+  color: #2563eb;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
 }

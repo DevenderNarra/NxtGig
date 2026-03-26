@@ -5,25 +5,36 @@ export default function Projects() {
   return (
     <main className="projects-coming">
 
+      {/* ✨ Stars */}
+      <div className="stars">
+        {[...Array(20)].map((_, i) => (
+          <span key={i}></span>
+        ))}
+      </div>
+
+      {/* 🎉 Confetti */}
+      <div className="confetti">
+        {[...Array(20)].map((_, i) => (
+          <span key={i}></span>
+        ))}
+      </div>
+
+      {/* CONTENT */}
       <div className="coming-container">
         
-        {/* Badge */}
         <div className="coming-badge">🚀 SaaS Projects</div>
 
-        {/* Title */}
         <h1 className="coming-title">
           Real SaaS Projects <span>Coming Soon</span>
         </h1>
 
-        {/* Subtitle */}
         <p className="coming-subtitle">
           We’re building high-impact, real-world SaaS projects for you.  
           Stay tuned — something exciting is on the way.
         </p>
 
-        {/* Glow Box */}
         <div className="coming-card">
-          <p>⚡ Live projects will be available soon</p>
+          ⚡ Live projects will be available soon
         </div>
 
       </div>
