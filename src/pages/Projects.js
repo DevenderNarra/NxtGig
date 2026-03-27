@@ -22,23 +22,22 @@ export default function Projects() {
       {/* CONTENT */}
       <div className="coming-container">
         
-        <div className="coming-badge">🚀 SaaS Projects</div>
+  <div className="coming-badge">🚀 Real Projects</div>
 
-        <h1 className="coming-title">
-          Real SaaS Projects <span>Coming Soon</span>
-        </h1>
+  <h1 className="coming-title">
+    Real Products <span>Coming Soon</span>
+  </h1>
 
-        <p className="coming-subtitle">
-          We’re building high-impact, real-world SaaS projects for you.  
-          Stay tuned — something exciting is on the way.
-        </p>
+  <p className="coming-subtitle">
+    Work on real product ideas, get shortlisted through assignments, and collaborate in teams.  
+    No more tutorial hell — just real work, real skills, and real growth.
+  </p>
 
-        <div className="coming-card">
-          ⚡ Live projects will be available soon
-        </div>
+  <div className="coming-card">
+    ⚡ Live projects will be available soon — stay tuned
+  </div>
 
-      </div>
-
+</div>
     </main>
   );
 }

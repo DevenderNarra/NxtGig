@@ -40,7 +40,7 @@ export default function Home() {
         <div className="container announcement-banner__inner">
           <span className="announcement-banner__badge">NEW</span>
           <p>
-            Introducing <strong>NxtGig</strong> — Build real SaaS products like a developer
+            Introducing <strong>NxtGig</strong> — Build Like a Developer. Ship Real Products.
           </p>
           <Link to="/projects" className="announcement-banner__link">
             Explore →
@@ -53,7 +53,7 @@ export default function Home() {
         <div className="container hero__inner">
           <div className="hero__eyebrow">
             <span className="hero__eyebrow-dot" />
-            Real SaaS Projects, Real Skills
+            Turn Your Skills into Real-World Experience
           </div>
 
           <h1 className="hero__heading">
@@ -62,8 +62,9 @@ export default function Home() {
           </h1>
 
           <p className="hero__subtext">
-            Work on real SaaS ideas, get shortlisted through assignments, and collaborate in teams.
-            No more tutorial hell — just real work, real skills.
+           Work on real product ideas, get shortlisted through assignments, and collaborate in teams.
+No more tutorial hell — just real work and real skills.
+
           </p>
 
           <div className="hero__cta-row">
