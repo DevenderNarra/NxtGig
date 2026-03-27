@@ -2,57 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Home.css';
 import StudentProjects from "./StudentProjects";
-
-const STEPS = [
-  {
-    number: "01",
-    icon: "📝",
-    title: "Assignment",
-    desc: "Start by solving a real-world assignment designed to test your problem-solving and coding skills."
-  },
-  {
-    number: "02",
-    icon: "📊",
-    title: "Get Evaluated",
-    desc: "Your submission is reviewed based on code quality, logic, and creativity by expert evaluators."
-  },
-  {
-    number: "03",
-    icon: "🎤",
-    title: "Interview",
-    desc: "Top performers are invited for a short technical interview to assess communication and thinking."
-  },
-  {
-    number: "04",
-    icon: "👥",
-    title: "Build a Team",
-    desc: "Selected candidates are grouped into small teams to collaborate like a real startup environment."
-  },
-  {
-    number: "05",
-    icon: "🔍",
-    title: "Explore Projects",
-    desc: "Teams explore available SaaS product ideas and choose one project to work on."
-  },
-  {
-    number: "06",
-    icon: "📄",
-    title: "Submit Proposal",
-    desc: "Prepare and submit a structured proposal including problem statement, solution, and tech stack."
-  },
-  {
-    number: "07",
-    icon: "✅",
-    title: "Get Approval",
-    desc: "Proposals are reviewed, and selected teams receive approval to start building their product."
-  },
-  {
-    number: "08",
-    icon: "🚀",
-    title: "Train & Build",
-    desc: "Work on the product with guidance, gain real-world experience, and ship features like a developer."
-  }
-]
+import HowItWorks from './Howitworks';
 
 const STATS = [
   { value: '50+', label: 'SaaS Projects' },
@@ -144,52 +94,7 @@ export default function Home() {
       </section>
 
       {/* ── How It Works ───────────────────────────────────────── */}
-     {/* ── How It Works ───────────────────────────────────────── */}
-<section className="section how-it-works" id="how-it-works">
-  <div className="container">
-    <div className="section-header">
-      <div className="section-pill">Process</div>
-      <h2 className="section-title">How It Works</h2>
-      <p className="section-subtitle">
-        From assessment to real product building — a structured journey to become a developer.
-      </p>
-    </div>
-
-    <div className="timeline">
-  {STEPS.map((step, i) => (
-    <div
-      key={step.number}
-      className={`timeline-item ${i % 2 === 0 ? "left" : "right"}`}
-    >
-      <div className="timeline-dot" />
-
-      <div className="timeline-content">
-
-        {/* HEADER */}
-        <div className="timeline-header">
-
-          {/* ICON LEFT */}
-          <div className="timeline-icon">{step.icon}</div>
-
-          {/* NUMBER + TITLE RIGHT */}
-          <div className="timeline-title-group">
-            <span className="timeline-number">{step.number}</span>
-            <h3>{step.title}</h3>
-          </div>
-
-        </div>
-
-        {/* DESCRIPTION */}
-        <p>{step.desc}</p>
-
-      </div>
-    </div>
-  ))}
-</div>
-
-  </div>
-</section>
-
+     <HowItWorks/>
       <StudentProjects />
       {/* ── Get Started ────────────────────────────────────────── */}
       <section className="section get-started" id="get-started">

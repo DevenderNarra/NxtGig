@@ -37,6 +37,14 @@ const PROJECTS = [
 function StudentProjects() {
   return (
     <section className="section impact">
+
+      {/* 🔥 Animated Background */}
+      <div className="bg-animation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
       <div className="container">
 
         <div className="section-header">
@@ -49,49 +57,52 @@ function StudentProjects() {
 
         <div className="impact-grid">
           {PROJECTS.map(p => (
-            <div key={p.title} className="impact-card">
+            <div className="impact-card">
 
-              {/* Icon */}
-              <div className="impact-top">
-                <div className="impact-icon-box">{p.icon}</div>
-              </div>
+  <div className="card-inner">
 
-              {/* Title */}
-              <h3>{p.title}</h3>
-              <p className="impact-category">{p.category}</p>
+    {/* FRONT SIDE */}
+    <div className="card-front">
 
-              {/* Challenge */}
-              <div className="impact-box challenge">
-                <span>● THE CHALLENGE</span>
-                <p>{p.challenge}</p>
-              </div>
+      <div className="impact-icon-box">{p.icon}</div>
 
-              {/* Hover Content */}
-              <div className="impact-hover">
-                <div className="impact-box solution">
-                  <span>● THE SOLUTION</span>
-                  <p>{p.solution}</p>
-                </div>
+      <h3>{p.title}</h3>
+      <p className="impact-category">{p.category}</p>
 
-                <div className="impact-box outcome">
-                  <span>● THE OUTCOME</span>
-                  <p>{p.outcome}</p>
-                </div>
-              </div>
+      <div className="impact-box challenge">
+        <span>● THE CHALLENGE</span>
+        <p>{p.challenge}</p>
+      </div>
 
-              {/* Footer */}
-              <div className="impact-footer">
-                <div className="tags">
-                  {p.tags.map(tag => (
-                    <span key={tag}>{tag}</span>
-                  ))}
-                </div>
-                <div className="duration">⏱ {p.duration}</div>
-              </div>
+      <div className="impact-footer">
+        <div className="tags">
+          {p.tags.map(tag => <span key={tag}>{tag}</span>)}
+        </div>
+        <div className="duration">⏱ {p.duration}</div>
+      </div>
 
-              <p className="hover-hint">Hover to reveal solution →</p>
+      <p className="hover-hint">Hover to flip →</p>
 
-            </div>
+    </div>
+
+    {/* BACK SIDE */}
+    <div className="card-back">
+
+      <div className="impact-box solution">
+        <span>● THE SOLUTION</span>
+        <p>{p.solution}</p>
+      </div>
+
+      <div className="impact-box outcome">
+        <span>● THE OUTCOME</span>
+        <p>{p.outcome}</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
           ))}
         </div>
 
